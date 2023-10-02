@@ -72,7 +72,9 @@ nav {
   align-items: center;
   gap: 2rem;
 }
-
+.resize{
+  height:40vh
+}
 .link {
   color: var(--extra-light);
   text-transform: uppercase;
