@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: rgb(110, 110, 110);
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: rgb(207, 42, 69);
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 350px;
+    background: #fff;
+    padding: 30px;
+    position: relative;
+}
+
+h6 {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+span {
+    position: absolute;
+    right: 34px;
+    top: 28px;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+h1 {
+    padding: 30px 0px;
+    font-size: 40px;
+    color: var(--text-color);
+}
+
+form label {
+    color: var(--text-color);
+    text-transform: uppercase;
+    position: relative;
+    font-size: 10px;
+    word-spacing: 4px;
+}
+
+form select {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    text-transform: capitalize;
+    padding-top: 3px;
+    color: var(--text-color);
+    padding-bottom: 3px;
+    font-size: 18px;
+    margin-left: -3px;
+    margin-bottom: 20px;
+    background-color: transparent;
+
+}
+
+form #cardno {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    padding-top: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    padding-right: 30px;
+    color: var(--text-color);
+    font-size: 18px;
+    background-color: transparent;
+}
+
+form label img {
+    position: absolute;
+    left: 264px;
+    top: 17px;
+    width: 20px;
+    height: 20px;
+}
+
+.float {
+    display: flex;
+}
+
+#validtill,
+#cvv {
+    border: none;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    outline: none;
+    width: 130px;
+    padding-top: 14px;
+    margin-bottom: 56px;
+    color: var(--text-color);
+    background-color: transparent;
+    font-size: 18px;
+}
+
+p {
+    margin-left: 25px;
+    margin-bottom: 56px;
+    margin-top: -20px;
+    font-size: 16px;
+    text-transform: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: rgb(233, 220, 220);
+    color: rgb(31, 30, 30);
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
