@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+*,
+*:after,
+*:before{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:active,
+:hover,
+:focus{
+    outline:0 !important;
+    outline-offset: 0;
+}
+
+a,
+a:hover{
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--primary-color);
+    transition: ease-in;
+}
+
+ul,
+ol{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-color: #A82C48;
+    --secondary-color: #43121d;
+    --third-color: #f98169;
+    --white-color:#fff;
+    --text-color: #555;
+    --text-gray: #999;
+    --black-color: #000;
+    --prinmary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Quicksand', sans-serif; 
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#navbarNav{
+    justify-content: end;
+}
+
+.container-fluid img{
+    height: 70px;
+    align-items: center;
+}
+
+.nav-item a{
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 0px 10px;
+    font-family: var(--prinmary-font);
+}
+
+.banner-card{
+    background-image: url(./images/bg/bg-1.jpg);
+    height: 625px;
+    background-size: cover;
+    background-position-y: center;
+    /* border: 2px solid black; */
+    position: relative;
+    /* top: -125px; */
+    margin-bottom: 100px;
+}
+
+#banner-title, .card-title{
+    color: var(--secondary-color);
+    font-family: var(--prinmary-font);
+    font-size: 50px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding:5px 3px 5px 0;
+}
+
+
+#banner-text, .card-text{
+    color: var(--text-color);
+    font-size: 18px;
+    font-family: var(--secondary-font);
+    padding-bottom: 5px;
+}   
+
+.btn{
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    margin-bottom: 4px;
+}
+
+.btn-outline{
+    border-radius: 0;
+}
+
+.banner-content{
+    width: 40%;
+    margin-top: 15%;
+    /* border: 2px solid beige; */
+}
+
