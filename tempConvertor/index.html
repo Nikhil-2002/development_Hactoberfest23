@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Horizon</title>
+</head>
+<body>
+    <h1>Temperature Convertor</h1>
+    <br>
+    <div id="main">
+       <form id="tempCal" onsubmit="calculateTemp(); return false">
+          <label for="temp">Enter the temperature to convert...</label>
+          <br/><br/>
+          <input type="number" name="temp" id="temp">
+          <select name="diff_temp" id="diff_temp">
+            <option value="celsius">Celsius [°C]</option>
+            <option value="fahrenheit">Fahrenheit [°F]</option>
+          </select>
+          <br/>
+          <input type="submit" name="temp" id="button"><br/><br/>
+          <span id="result"></span>
+
+       </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
