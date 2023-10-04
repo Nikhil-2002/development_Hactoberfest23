@@ -1,0 +1,22 @@
+{
+  "name": "gallery-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "postcss ./src/css/input.css -o ./src/css/output.css -w",
+    "build": "postcss ./src/css/input.css -o ./src/css/output.css"
+  },
+  "keywords": [
+    "tailwind",
+    "frontend"
+  ],
+  "author": "drifterDev",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "tailwindcss": "^3.3.3"
+  }
+}

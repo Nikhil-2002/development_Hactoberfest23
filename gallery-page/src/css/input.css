@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .galery-container {
+    @apply columns-1 sm:columns-2 md:columns-3 lg:columns-4 space-y-3 p-3;
+  }
+
+  .galery-items {
+    @apply hover:!scale-90 transition duration-300 rounded overflow-hidden cursor-pointer;
+  }
+}
