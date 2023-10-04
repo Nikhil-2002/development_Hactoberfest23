@@ -1,0 +1,253 @@
+#title{
+    text-align: left;
+}
+body{
+    font-family: "Montserrat";
+    text-align: center;
+}
+.big_heading{
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+    margin: 15% auto  auto auto;
+}
+h1,h2,h3 {
+    font-family: 'Montserrat'; 
+}
+.testimonial-text{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.pricing_heading{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.plan_heading{
+    font-size: 3rem;
+    line-height: 1.5;
+}
+.features_heading{
+    font-size: 1.5em;
+    font-weight: 501;
+}
+.plan_top{
+    font-size: 1.5em;
+    font-weight: 501;
+}
+
+.navbar-brand{
+    font-family: 'Ubuntu';
+font-size: 3rem;
+}
+.container-fluid{
+    padding: 3% 15% 7%;
+}
+.colored-section{
+    background-color: #ff4c68;
+    color: white;
+}
+.white_section{
+    background-color: #fff;
+}
+
+li{
+    margin: auto 5% auto;
+}
+.navbar-nav{
+    font-size: 1.2rem;
+}
+
+.phone{
+    position: absolute;
+    transform: rotate(25deg);
+    width: 24%;
+}
+.download-button{
+    margin: 5% 3% 5% 0  ;
+}
+.symbol{
+    margin-bottom: 1rem;
+    color: #ef8172;
+}
+.symbol:hover{
+    color: #ff4c68;
+}
+#features{
+    padding:7% 15%;
+    position: relative;
+}
+.feat{
+    padding: 5%;
+}
+p{
+    color: #afafaf;
+}
+#testimonials{
+    background-color: #ef8172;
+}
+.testimonial-img{
+    border-radius: 50%;
+    margin: 20px ;
+    width: 10%;
+}
+#press{
+    background-color: #ef8172;
+    padding-bottom: 3%;    
+}
+.press-logo{
+    width: 15%;
+    margin: auto 3% auto;
+}
+.carousel-item {
+    padding: 7% 15%;
+}
+#pricing{
+    padding: 100px;
+}
+.pricing-column{
+    padding: 3% 2%;
+}
+@media (max-width:992px){
+    .row{
+        text-align: center;
+    }
+    .phone{
+        position: static;
+        width:30vw;
+        transform: rotate(0);   
+    }
+}
+#cta{
+   
+    height:70vh ;
+  
+    font-weight:900 ;
+    font-family: 'Montserrat';
+    font-size: 2.5rem;
+    line-height: 1.5;
+    padding:7% 15% ;
+}
+.find_the{
+    font-size: 1.5em;
+    font-weight: 501;
+    margin-bottom: 10%;
+}
+#footer{
+    height: 40vh;
+    padding: 7% 15%;
+}
+.icon{
+    margin: 10px;
+}
+
+/* contact form */
+
+.contact .container .row h1 {
+    font-family: "Poppins", sans-serif, "arial";
+    font-weight: 600;
+    font-size: 72px;
+    color: #ff4c68;
+    text-align: center;
+  }
+  
+  h4 {
+    font-family: "Roboto", sans-serif, "arial";
+    font-weight: 400;
+    font-size: 20px;
+    color: #9b9b9b;
+    line-height: 1.5;
+  }
+  
+  /* ///// inputs /////*/
+  
+  input:focus ~ label,
+  textarea:focus ~ label,
+  input:valid ~ label,
+  textarea:valid ~ label {
+    font-size: 0.75em;
+    color: #999;
+    top: -5px;
+    -webkit-transition: all 0.225s ease;
+    transition: all 0.225s ease;
+  }
+  
+  .styled-input {
+    float: left;
+    width: 293px;
+    margin: 1rem 0;
+    position: relative;
+    border-radius: 4px;
+  }
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+  }
+  
+  .styled-input.wide {
+    width: 650px;
+    max-width: 100%;
+  }
+  
+  input,
+  textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color: rgb(70, 53, 53);
+    color: white;
+    border-radius: 4px;
+  }
+  
+  input:focus,
+  textarea:focus {
+    outline: 0;
+  }
+  
+  input:focus ~ span,
+  textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+  }
+  
+  textarea {
+    width: 100%;
+    min-height: 15em;
+  }
+  
+  .input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+  }
+  
+  .btn-lrg {
+    float: right;
+  }
+  
+  .submit-btn {
+    padding: 7px 35px;
+    border-radius: 60px;
+    display: inline-block;
+    background-color: #ff4c68;
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.06), 0 2px 10px 0 rgba(0, 0, 0, 0.07);
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  
+  .submit-btn:hover {
+    transform: translateY(1px);
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 1px 0 rgba(0, 0, 0, 0.09);
+  }
