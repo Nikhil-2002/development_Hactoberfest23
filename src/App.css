@@ -38,3 +38,9 @@ body{
   font-size:1.2rem;
   color:var(--mainYellow);
 }
+
+.cart-btn{
+ outline: none!important;
+ border: none!important;
+ border-radius: 5px;
+}
