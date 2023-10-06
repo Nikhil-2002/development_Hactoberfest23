@@ -64,16 +64,24 @@ html{
     font-family: var(--prinmary-font);
 }
 
-.banner-card{
+/* .banner-card {
     background-image: url(./images/bg/bg-1.jpg);
     height: 625px;
     background-size: cover;
-    background-position-y: center;
-    /* border: 2px solid black; */
+    background-position: right;
     position: relative;
-    /* top: -125px; */
-    margin-bottom: 100px;
-}
+    /* Add other styles as needed */
+/* } */
+
+/* .banner-content { */
+    /* position: absolute; */
+    /* top: 50%; */
+    /* left: 10%; Adjust the left percentage to position the text */
+    /* transform: translate(-50%, -40%); */
+    /* text-align: left; */
+    /* color: white; */
+    /* max-width: 50%; Limit the width of the text content for better readability on larger screens */
+/* } */ 
 
 #banner-title, .card-title{
     color: var(--secondary-color);
@@ -106,9 +114,5 @@ html{
     border-radius: 0;
 }
 
-.banner-content{
-    width: 40%;
-    margin-top: 15%;
-    /* border: 2px solid beige; */
-}
+
 
