@@ -1,60 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Payment Method</title>
-  </head>
-  <body>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        h6 {
+            margin: 0;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        select,
+        input[type="text"],
+        input[type="checkbox"],
+        button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            margin-bottom: 15px;
+        }
+
+        .float {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
     <div class="container">
-      <h6>Checkout</h6>
-      <span>x</span>
-      <h1>Payment Method</h1>
-      <form action="/">
-        <label for="country"
-          >Country
-          <select name="country" id="country">
-            <option value="germany">India</option>
-            <option value="england">USA</option>
-            <option value="india">UK</option>
-          </select>
-        </label>
-        <label for="cardno"
-          >Card Number
-          <input
-            type="text"
-            name="cardno"
-            id="cardno"
-            maxlength="19"
-            onkeypress="cardspace()"
-          />
-        </label>
-        <div class="float">
-          <label for="validtill"
-            >Valid till
-            <input
-              type="text"
-              name="validtill"
-              id="validtill"
-              maxlength="7"
-              onkeypress="addSlashes()"
-            />
-          </label>
-          <label for="cvv"
-            >Cvv
-            <input type="text" name="cvv" id="cvv" maxlength="3" />
-          </label>
-        </div>
-        <label for="checkbox">
-          <input type="checkbox" name="checkbox" id="checkbox" />
-          <p>Payment Address is the same as the Delivery Address</p></label
-        >
-        <button>Pay 890.00 Rs.</button>
-      </form>
+        <h6>Checkout</h6>
+        <span>x</span>
+        <h1>Payment Method</h1>
+        <form action="/">
+            <label for="country">
+                Country
+                <select name="country" id="country">
+                    <option value="india">India</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                </select>
+            </label>
+            <label for="cardno">
+                Card Number
+                <input type="text" name="cardno" id="cardno" maxlength="19" placeholder="XXXX XXXX XXXX XXXX" onkeypress="cardspace()">
+            </label>
+            <div class="float">
+                <label for="validtill">
+                    Valid till
+                    <input type="text" name="validtill" id="validtill" maxlength="7" placeholder="MM/YYYY" onkeypress="addSlashes()">
+                </label>
+                <label for="cvv">
+                    CVV
+                    <input type="text" name="cvv" id="cvv" maxlength="3" placeholder="XXX">
+                </label>
+            </div>
+            <label for="checkbox">
+                <input type="checkbox" name="checkbox" id="checkbox">
+                Payment Address is the same as the Delivery Address
+            </label>
+            <button>Pay 890.00 Rs.</button>
+        </form>
     </div>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
