@@ -1,0 +1,137 @@
+.heroWrapper {
+  width: 100%;
+  min-height: 460px;
+  background: #deedd6;
+  position: relative;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.heroInner {
+  margin-left: 150px;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.dropDown {
+  z-index: 100;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  padding: 20px 20px 20px 20px;
+  border: none;
+  border-radius: 10px;
+  background: white;
+  outline-style: none;
+  cursor: pointer;
+}
+
+.headerText {
+  letter-spacing: 0.5px;
+  font-size: 2.5rem;
+  color: #353839;
+  font-weight: 600;
+  width: 60%;
+  margin-top: 5px;
+}
+
+.heroInner p {
+  font-size: 18px;
+  margin: 25px 0;
+}
+.inputLocation {
+  display: flex;
+  justify-content: flex-start;
+  width: 475px;
+  background: white;
+  border-radius: 0.75rem;
+}
+
+.inputLocation i {
+  align-self: center;
+  justify-self: center;
+  padding: 25px;
+}
+.inputLocation input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+}
+
+.inputLocation input::placeholder {
+  font-size: 1.2rem;
+}
+
+.heroImage {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+}
+
+.heroImage img {
+  height: 100%;
+}
+.arrow {
+  color: #38bc38;
+}
+
+@media (max-width: 900px) {
+  .heroImage {
+    width: 100%;
+  }
+  .heroImage img {
+    transform: rotate(-90deg) scale(1.2);
+    height: 100vw;
+    object-fit: cover;
+    position: absolute;
+    left: 10%;
+    bottom: 10px;
+  }
+  .heroWrapper {
+    align-items: flex-end;
+  }
+
+  .heroInner {
+    margin: 50px 20px;
+    overflow: hidden;
+    width: 100%;
+  }
+  .inputLocation {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .inputLocation input {
+    width: 90%;
+  }
+  .slogan {
+    display: none;
+  }
+  .dropDown {
+    display: none;
+  }
+  .headerText {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .inputLocation {
+    width: 100%;
+  }
+  .heroImage img {
+    bottom: 160px;
+  }
+  .headerText {
+    width: 80%;
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .headerText {
+    width: 80%;
+    font-size: 1.5rem;
+  }
+}
