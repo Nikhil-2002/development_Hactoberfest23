@@ -1,0 +1,46 @@
+.QuestionBox {
+  padding: 25px 0;
+  width: 100%;
+  color: rgba(52, 53, 56, 0.8);
+  border-bottom: 1px solid rgba(52, 53, 56, 0.1);
+}
+
+.programBoxRes {
+  padding: 15px 0;
+  width: 100%;
+  color: rgba(52, 53, 56, 0.8);
+  border-bottom: 1px solid rgba(52, 53, 56, 0.1);
+}
+
+.questionBoxInner {
+  justify-content: space-between;
+  cursor: pointer;
+}
+.question {
+  padding-right: min(300px, 20%);
+  font-size: 1.6rem;
+}
+
+.programTitle {
+  font-size: 1.25rem;
+  color: #353535;
+  font-weight: 600;
+}
+
+.hide {
+  display: none;
+}
+
+.answers {
+  margin-top: 20px;
+  display: none;
+}
+.open {
+  display: flex;
+}
+
+@media (max-width: 900px) {
+  .question {
+    font-size: 1.25rem;
+  }
+}

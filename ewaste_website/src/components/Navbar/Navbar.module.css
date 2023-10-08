@@ -1,0 +1,215 @@
+.navbarWrapper {
+  width: 100%;
+  height: min(10vh, 100px);
+  z-index: 10000;
+  position: relative;
+}
+
+.navbarInner {
+  justify-content: space-between;
+  margin: 0 50px;
+  width: 100%;
+  height: 100%;
+}
+
+.navLeft {
+  min-width: 200px;
+}
+
+.navRight {
+  width: 100%;
+  justify-content: space-between;
+}
+
+.navLinksWrapper {
+  display: flex;
+  width: 400px;
+}
+
+.nav {
+  color: grey;
+  font-weight: 600;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.nav:hover {
+  color: #343538;
+}
+
+.verticalLine {
+  border-left: 3px solid #dadada;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.brand {
+  width: 80%;
+  cursor: pointer;
+}
+
+.login {
+  color: #343538;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0.7rem 1.1rem;
+  /* background-color: red; */
+}
+
+.signup {
+  padding: 0.7rem 1.1rem;
+  border-radius: 50px;
+  background: #0aad0a;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 0.2rem;
+  cursor: pointer;
+  outline-style: none;
+  border-style: none;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transform: scale(1.5);
+  border: none;
+  z-index: 1500;
+  margin: 0 20px 0 10px;
+}
+
+.hamburgerLines {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #1d3964;
+  border-radius: 1px;
+  /* transition: 400ms background 0ms, 400ms transform 0ms; */
+}
+
+.hamburgerLines::before,
+.hamburgerLines::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
+  background: #1d3964;
+  position: relative;
+  /* transition: 400ms background 0ms, 400ms transform 400ms; */
+}
+
+.hamburgerLines::before {
+  top: -5px;
+}
+.hamburgerLines::after {
+  bottom: -3px;
+  /* opacity: 1; */
+  /* transition: 400ms opacity 600ms; */
+}
+.hamburger.active span {
+  transform: rotate(135deg);
+  /* transition: 400ms transform 400ms, 400ms background 400ms; */
+}
+.hamburger.active span::before {
+  transform: rotate(90deg) translatex(5px);
+  /* transition: 400ms transform 0ms, 400ms background 400ms; */
+}
+.hamburger.active span::after {
+  opacity: 0;
+  /* transition: 400ms opacity 0ms; */
+}
+
+/*NAVBAR RESPONSIVE*/
+.navResWrapper {
+  position: absolute;
+  top: min(10vh, 100px);
+  left: 0;
+  width: 100%;
+  height: 90vh;
+  display: none;
+  background: white;
+  z-index: 1000;
+  flex-direction: column;
+  list-style-type: none;
+  padding-top: 10px;
+}
+.navResLinks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.navR {
+  margin: 15px 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #343538;
+}
+
+.navResInner {
+  margin: 0 15px;
+  overflow: hidden;
+}
+
+.navRdropDown {
+  padding: 0 0;
+  width: 100%;
+  margin: 10px 0;
+  background: white;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+.open {
+  display: flex;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+  .navLinksWrapper {
+    display: none;
+  }
+  .navRight {
+    justify-content: flex-end;
+  }
+  .navLeft {
+    width: 300px;
+  }
+  .navbarWrapper {
+    box-shadow: 5px 2px 25px #cecece;
+  }
+  .navbarInner {
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .signup,
+  .login {
+    font-size: 14px;
+  }
+  .signup {
+    margin-left: 10px;
+  }
+
+  .navLeft {
+    min-width: 150px;
+  }
+  .navbarInner {
+    overflow: hidden;
+  }
+}

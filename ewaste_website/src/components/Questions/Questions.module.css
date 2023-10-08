@@ -1,0 +1,21 @@
+.QuestionsWrapperInner {
+  width: 1100px;
+  flex-direction: column;
+}
+
+.QuestionsHeading {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 40px 0;
+}
+
+.QuestionsList {
+  flex-direction: column;
+  width: 90%;
+}
+
+@media (max-width: 1200px) {
+  .QuestionsWrapperInner {
+    width: 100%;
+  }
+}
