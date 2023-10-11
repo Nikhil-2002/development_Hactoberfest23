@@ -1,0 +1,255 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&display=swap');
+
+:root{
+    --card--width-lg:157px;
+    --card--height-lg:190px;
+
+    --card--width-sm:120px;
+    --card--height-sm:168px;
+
+    --num--cards:4;
+
+    --card-horizontal-space-lg:100px;
+    --card-horizontal-space-sm:50px;
+
+    --badge-bg-color:darkgrey;
+    --primary-color:black;
+    --secondary-color:#ffffff;
+
+    --primary--font:'Golos+Text',sans-serif;
+}
+
+body{
+    height: 100vh;
+    font-family: var(--primary--font);
+}
+
+main{
+    height:  55%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-container{
+    position: relative;
+    height: 100%;
+    width: calc(var(--card--width-lg) * (var(--num--cards)/2) + var(--card-horizontal-space-lg));
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "a b"
+                         "c d";
+    /* border: 1px solid black; */
+}
+
+.card-pos-a{
+    grid-area: a;
+    /* border: 1px solid black; */
+    /* background-color:rgb(70, 72, 177); */
+}
+
+.card-pos-b{
+    grid-area: b;
+    /* border: 1px solid black; */
+    /* background-color:rgb(173, 109, 26); */
+}
+
+.card-pos-c{
+    grid-area: c;
+    /* border: 1px solid black; */
+    /* background-color:rgb(3, 99, 133); */
+}
+
+.card-pos-d{
+    grid-area: d;
+    /* border: 1px solid black; */
+    /* background-color:rgb(51, 20, 76); */
+}
+.card-pos-a, .card-pos-b, .card-pos-c, .card-pos-d{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    position: absolute;
+    height: var(--card--height-lg);
+    width: var(--card--width-lg);
+    perspective: 1000px;
+    cursor: pointer;
+    transition: transform 0.6s ease-in-out
+}
+
+.card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-front,.card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card-img{
+    height: 100%;
+}
+
+.card-back{
+    transform: rotateY(180deg);
+}
+
+/* .card:hover .card-inner{
+    transform: rotateY(180deg);
+} */
+
+.card-inner.flip-it{
+    transform: rotateY(180deg);
+}
+
+
+/* Header */
+
+header{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.header-title-container{
+    display: flex;
+    justify-content: center;
+}
+
+.header-round-info-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header-status-info-container,
+.header-button-container,
+.header-score-container,
+.header-round-container,
+.header-img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-score-container,
+.header-round-container,
+.header-img-container{
+    width: 150px;
+}
+
+.header-img{
+    height: 75px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 5px;
+    box-shadow: 0 4px 8px black;
+    transform: rotate(-3deg);
+}
+
+.badge{
+    background-color: var(--badge-bg-color);
+    color: var(--secondary-color);
+    padding: 2px 10px 3px;
+    border-radius: 15px;
+}
+
+
+/* Button */
+
+
+#playGame{
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+#playGame:disabled {
+  pointer-events: none;
+}
+
+#playGame:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+#playGame:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+/* shuffling the card */
+
+.card.shuffle-left{
+    transform: translateX(300px) translateY(40px);
+}
+
+.card.shuffle-right{
+    transform: translateX(-350px) translateY(-40px);
+}
+
+
+@media screen and (max-width: 600px){
+    .card{
+        width: var(--card--width-sm);
+        height: var(--card--height-sm);
+    }
+    .card-container{
+        width: calc(var(--card--width-sm) * (var(--num--cards)/2) + var(--card-horizontal-space-sm));
+
+    }
+    main{
+        height: 50%;
+    }
+    .current-status{
+        font-size: 1.2rem;
+    }
+    .game-play-button-container{
+        width: 120px;
+        height: 40px;
+    }
+    #playGame{
+        padding: 6px 8px;
+        font-size: 12px;
+        min-height: 40px;
+    }
+    .header-img{
+        height: 55px;
+    }
+}
