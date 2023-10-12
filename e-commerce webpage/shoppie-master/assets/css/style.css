@@ -209,8 +209,8 @@ body {
 
 .product-btn ion-icon { font-size: 1.4rem; }
 
-.product-card:is(:hover, :focus-within) .product-btn { opacity: 1; }
-
+.product-card:is(:hover, :focus-within) .product-btn { opacity: 1;  border: 1px solid rgb(255, 196, 0); }
+.product-card:is(:hover, :focus-within) { opacity: 1;  border: 1px solid rgb(255, 196, 0); }
 .product-card .card-banner { position: relative; }
 
 .product-card .card-content { margin-block-start: 30px; }
