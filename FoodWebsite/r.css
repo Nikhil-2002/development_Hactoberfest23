@@ -1,0 +1,40 @@
+
+*{
+    margin:0px;
+    padding:0px;
+}
+body{
+    display: flex;
+    flex-direction: row;
+}
+.r{
+    
+    position: sticky;
+    top: 0%;
+    height: 100vh;
+    left: 0%;
+}
+.l{
+    border-style: solid;
+    border-color: black;
+    max-height: 100vh;
+    overflow: auto;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 300px;
+    justify-content: space-evenly;
+}
+
+ li{
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+}
