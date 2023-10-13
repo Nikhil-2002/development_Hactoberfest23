@@ -1,0 +1,230 @@
+*{
+    margin: 0px;
+    padding: 0px; 
+    overflow-x: hidden;  
+}
+
+nav{
+    position: sticky;
+    top: 0%;
+    left: 0%;
+    z-index: 7;
+    background-color: darkblue;
+    display: flex;
+    justify-content: space-between;
+   
+    color: white;
+    max-width: 100%;
+    /* padding: 40px; */
+
+
+    flex-direction: row;
+}
+nav .h{
+    font-size: 1.6rem;
+    text-decoration: dashed;
+}
+nav ul{
+    display: flex;
+    margin-right: 5%;
+    
+
+gap: 50px;
+
+}
+nav ul li{
+    list-style: none;
+   transition: .5s;
+  cursor: pointer;
+
+}
+
+nav ul li:hover{
+    /* animation: na 1s  ; */
+    background-color: rgb(5, 2, 77);
+    border-radius: 10px;
+    color:rgb(225, 225, 225);
+    padding: 10px;
+    border-style: solid;
+}
+/* @keyframes na{
+    0% {
+        color:blue;
+         background-color: black;
+    }
+    100%{
+        color: white;
+        background-color: black;
+    }
+} */
+.main{
+    font-family: cursive;
+
+}
+.head{
+    text-align: center;
+    color: rgb(231, 223, 223);
+    position: absolute;
+    top: 45%;
+    left: 9%;
+    max-width: 80%;
+    margin: auto;
+}
+.main .head h1{
+    font-size: 5rem;
+}
+.main .head .sub{
+    font-size: 3rem;
+  margin-top: 35px;
+}
+.part2{
+    color: white;
+    margin-top: -10px;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 90px;
+    text-align: center;
+    background-color : rgb(40,17, 84)
+}
+
+.hm h1{
+  
+    display:inline
+}
+.part2 .in{
+    max-width: 80%;
+    margin: auto;
+    line-height: 50px;
+}
+.part2 button{
+    padding: 10px;
+    background-color: red;
+    color: whitesmoke;
+}
+.mac{
+text-align: center;
+background: linear-gradient(
+    to bottom,
+    rgb(40,17, 84) 0%,
+    rgb(40,17, 84) 50%,
+    white 50%,
+    white 100%
+);
+}
+button:hover{
+    opacity: .8;
+}
+.p3{
+    
+    max-width: 80%;
+    margin: auto;
+    margin-top: 60px;
+    text-align: center;
+}
+.p3 h1{
+    text-decoration: bold;
+    margin-bottom: 30px;
+}
+.p3 button{
+    margin-top: 20px;
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+}
+.p4{
+    margin-top: 60px;
+    text-align: center;
+}
+.p5{
+    
+    text-align: center;
+}
+.p5 div{
+    color: white;
+    position:absolute;
+    top:410%;
+
+}
+.p6{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+}
+.p6 .gc{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-left: 20px;
+    
+}
+.p6 .cont{
+    margin-top: 30px;
+    margin: auto;
+    display: flex;
+    padding: 20px;
+    max-width: 50%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+.p6 button{
+    margin-top: 20px;
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+}
+.p6 .para{
+    padding: 10px;
+    border-bottom: solid grey;
+    
+}
+.fi{
+    display: flex;
+    flex-direction: column;
+}
+.ind .tl{
+    font-size: .7rem;
+    padding: 10px;;
+    border-bottom: solid white;
+    margin-bottom: 15px;;
+}
+
+.p8{
+    background:  rgb(40,17, 84) ;
+    display: flex;
+    margin-top: 100px;
+    color: white;
+   justify-content: space-evenly;
+    flex-direction: row;
+}
+li{
+    list-style: none;
+}
+.p9{text-align: center;
+background-color: blue;
+color: aliceblue;
+padding: 10px;}
+
+@media (max-width: 900px){
+    .p6{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .head{
+        position: relative;
+        color: black;
+
+    }
+    .main .head h1{
+    font-size: 3rem;
+}
+.main .head .sub{
+    font-size: 1rem;
+  margin-top: 35px;
+}
+}
