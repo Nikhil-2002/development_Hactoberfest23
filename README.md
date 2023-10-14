@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Development Projects Collections🔥
 
-In the project directory, you can run:
+Our Mission: 🎉
 
-### `npm start`
+Welcome to our Development Projects Collections! Our mission is to empower code beginners on their journey to becoming open source contributors. We understand that the first pull request can be a daunting step, but we're here to make it an exciting and successful experience for you. Whether you're new to coding or just new to open source, we've got the tools, resources, and a supportive community to guide you through your first contributions. Together, we'll break down the barriers and help you take your first steps in the world of open source development. So, come join us and let's celebrate your first successful pull request! 🚀🌟
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![image](https://user-images.githubusercontent.com/70385488/192114009-0830321a-d227-4a4d-8411-6c03b54d7ce6.png)
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+<div align="center">
 
-### `npm test`
+[![Open Source Love](https://firstcontributions.github.io/open-source-badges/badges/open-source-v1/open-source.svg)](https://github.com/kishanrajput23/Hacktoberfest-2022)
+<img src="https://img.shields.io/badge/HacktoberFest-2023-blueviolet" alt="Hacktober Badge"/>
+<img src="https://img.shields.io/static/v1?label=%E2%AD%90&message=If%20Useful&style=style=flat&color=BC4E99" alt="Star Badge"/>
+<a href="https://github.com/kishanrajput23" ><img src="https://img.shields.io/badge/Contributions-welcome-green.svg?style=flat&logo=github" alt="Contributions" /></a>
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</div>
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### This repository aims to help code beginners with their first successful pull request and open source contribution. :partying_face:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+:star: Feel free to use this project to make your first contribution to an open-source project on GitHub. Practice making your first pull request to a public repository before doing the real thing!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+:star: Make sure to grab some cool swags during Hacktoberfest by getting involved in the open-source community.
 
-### `npm run eject`
+### This repository is open to all members of the GitHub community. Any member can contribute to this project! :grin:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## What is Hacktoberfest? :thinking:
+A month-long celebration from October 1st to October 31st presented by [Digital Ocean](https://hacktoberfest.digitalocean.com/) and [DEV Community](https://dev.to/) collaborated with [GitHub](https://github.com/blog/2433-celebrate-open-source-this-october-with-hacktoberfest) to get people involved in [Open Source](https://github.com/open-source). Create your very first pull request to any public repository on GitHub and contribute to the open-source developer community.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[https://hacktoberfest.digitalocean.com/](https://hacktoberfest.digitalocean.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Rules :fire:
+To qualify for the __official limited edition Hacktoberfest shirt__, you must register [here](https://hacktoberfest.digitalocean.com/) and make four Pull Requests (PRs) between October 1-31, 2023 (in any time zone). PRs can be made to any public repository on GitHub, not only the ones with issues labeled Hacktoberfest. This year, the __first 40,000__ participants who complete Hacktoberfest can elect to receive one of two prizes: a tree planted in their name.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+:tada: :confetti_ball: :smiley: _**Happy Contributing**_ :smiley: :confetti_ball: :tada:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Author 🙋‍♂️ : [Find Me Here](https://www.linkedin.com/in/nikhil-falke-1a3639200/)
