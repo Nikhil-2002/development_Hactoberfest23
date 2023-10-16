@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/nav.css">
+    <link rel="stylesheet" href="./css/cake.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <title>Birthday | CAKE</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <a class="center" href="home.html">
+                <div class="cake1">
+                    <div class="velas">
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                        <div class="fuego"></div>
+                    </div>
+                    <div class="cobertura"></div>
+                    <div class="bizcocho"></div>
+
+                </div>
+            </a>
+
+        </div>
+    </nav>
+
+    <div id="birthday-cake">
+        <div class="cake">
+            <div class="middle"></div>
+            <div class="chocs"></div>
+            <div class="top"></div>
+        </div>
+        <div class="candles">
+            <div class="flame"></div>
+            <div class="flame2"></div>
+            <div class="flame3"></div>
+            <div class="text">Happy Birthday!</div>
+            <div class="shadows"></div>
+        </div>
+        <p class="text2"> -> Play with the flames by clicking on them to blow them and then light up again 😚</p>
+    </div>
+
+    <!-- Add an audio element for the music -->
+    <audio autoplay loop>
+        <source src="./img/myuni.mp3" type="audio/mpeg">
+        <!-- You can provide multiple sources for different browser support -->
+        <!-- <source src="background-music.ogg" type="audio/ogg"> -->
+        Your browser does not support the audio element.
+    </audio>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".candles").click(function () {
+                if ($(".flame").css("opacity") == "0") {
+                    // Candles are already blown out, so reset them
+                    $(".flame").animate({ "opacity": 1 }, "fast");
+                    $(".flame2").animate({ "opacity": 1 }, "fast");
+                    $(".flame3").animate({ "opacity": 1 }, "fast");
+                    $(".text").animate({ "top": 0, "opacity": 0 }, "fast");
+                    // Pause the music
+                    audio.pause();
+                } else {
+                    // Candles are glowing, so blow them out, play music, and display the text
+                    $(".flame").animate({ "opacity": 0 }, "fast");
+                    $(".flame2").animate({ "opacity": 0 }, "fast");
+                    $(".flame3").animate({ "opacity": 0 }, "fast");
+                    $(".text").animate({ "top": -150, "opacity": 1 }, "fast");
+                    // Play the music
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
