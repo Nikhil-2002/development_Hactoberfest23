@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="icon" href="/img/weather-icon.png">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+<body>
+    <div class="main-content">
+        {{>header}}
+        <p>search your location to get weather status</p>
+
+        <form>
+        <input type="text">
+        <button>search</button>
+        </form>
+
+        <p id="msg-one"></p>
+        <p id="temperature"></p>
+        <p id="wind_speed"></p>
+        <p id="humidity"></p>
+        
+    </div>
+    <p id="try-again"></p>
+
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+</html>
