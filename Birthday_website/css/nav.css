@@ -1,0 +1,57 @@
+.navbar{
+    padding: 1rem;
+}
+
+
+
+.navbar .logo{
+    float: left;
+    
+}
+
+.navbar .nav-items{
+    float: right;
+    margin-top: 1rem;
+}
+
+.navbar::after{     /* DOUBTTTTTTTTTTTTT*/
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.navbar .nav-item{
+    display: inline-block;
+    padding: 1rem;
+    text-transform: uppercase;
+   
+}
+
+.navbar a:link, 
+.navbar a:visited{
+    color: #f4f4f4;
+}
+
+.navbar a{
+    padding-bottom: 0.3rem;
+    text-decoration: none;
+    letter-spacing: 2.5px;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.navbar a:hover{
+    border-bottom: 1px solid #fff ;
+}
+
+/* ################ Media Queries######################## */
+@media (max-width:500px){
+
+    .navbar .nav-items, .navbar .logo{
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+}

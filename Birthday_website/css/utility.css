@@ -1,0 +1,65 @@
+/* #################### UTILITY CLASSEES ###################### */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;     
+}
+.lg-heading{           /*utility class..if we give lg-heading at more places then at all those places the font size will be changed*/
+    font-size: 3.5rem;
+}
+
+.mid-heading{
+    font-size: 2.2rem;
+    font-style: italic;
+}
+
+.text-red{
+    color: #e63946;
+}
+
+.text-light{
+    color: #f4f4f4;
+}
+
+.text-black{
+    color: #333;
+}
+
+.text-grey{
+    color: #555;
+}
+
+.bg-dark{
+    background-color: #263238;
+}
+
+.btn{
+    display: inline-block;
+    padding: 0.5em 1.5em;       /*DOUBTTTTTTTTTTTTTTT*/
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0.5em 0;             /*DOUBTTTTTTTTTTTTTTT*/
+
+}
+
+.btn-primary{
+    background-color: #fff;
+    border-radius:  10rem ;
+}
+
+.btn-primary:hover{
+    background-color: #ddd;
+}
+
+.btn-secondary{
+    border: 2px solid #e63946;
+    border-radius: 1.5em;
+    color: #e63946;
+    background-color: #fff;
+}
+
+.btn-secondary:hover{
+    background-color: #fcf3f2;
+    
+}

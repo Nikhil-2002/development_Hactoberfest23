@@ -1,0 +1,352 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* if we make a box of 500 width then after applying padding also it should be adjusted in that 500 px only and should not become 520px */
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  font-size: 1rem;
+  /*means 16px..we've taken root as 10px so just write 1.6rem for 16px */
+  text-decoration: none;
+}
+
+p,
+li {
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+  /*font size ka 0.5...em will be helful for responsiveness*/
+  letter-spacing: 0.10em;
+}
+
+.header {
+  text-align: center;
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('../img/bday2.jpeg');
+  /* we've used one more background using linear gradient to dark the background, and we've set its opacity from default 1 to 0.5*/
+  background-position: center;
+  background-size: cover;
+  /*scales the image ,preserving its ratio, to the smallest possible size to fill the container leaving no blank space */
+  background-repeat: no-repeat;
+}
+
+.header-content {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.pic-cards {
+  /* border: 2px solid red; */
+  display: flex;
+  position: absolute;
+  top: 73%;
+  /* flex-wrap: wrap; */
+
+}
+
+  .pics:nth-child(1){
+    margin-left: 45px;
+  }
+  /* .pics:last-child{
+    margin-right: 15px;
+  } */
+
+.pics {
+  height: 270px; 
+  /* margin: 0px 1px; */
+}
+
+
+
+.pic-cards .pics {
+  float: left;
+  width: 19%;
+}
+
+.pics img {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pic-cards::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ############### Letter Button Space ############ */
+.showcase {
+  background: #995C68;
+  padding: 10rem 0;
+}
+
+section .container{
+  top:180%;
+}
+
+
+.row {
+  height: 400px;
+  background-color: #FFE4D6;
+  box-shadow: 0px 0px 20px 0px #aaa;
+  /*horizontal-offset=0,vertical-offset=0,blur=20,stretch=0*/
+}
+
+
+.img-box {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.text-box {
+  float: right;
+  width: 50%;
+  padding: 3rem;
+}
+
+.text-box p {
+  font-size: 1.5rem;
+}
+
+.img-box img {
+  display: inline-block;
+  width: 95%;
+  height: 100%;
+  object-fit: cover;
+  /*to maintain aspect ratio of image*/
+
+}
+
+.container h2 {
+  text-align: center;
+  padding-top: 5rem;
+}
+
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* #################### CAKE CSS ########################## */
+
+
+#cake1 {
+  display: block;
+  position: relative;
+  margin: -10em auto 0 auto;
+}
+
+/* ============================================== Candle
+*/
+.cakebox {
+  width: 100%;
+  height: 100%;
+  background: #995C68;
+}
+
+.bdaycake {
+  background: #ffffff;
+  border-radius: 10px;
+  position: absolute;
+  top: 228px;
+  left: 50%;
+  margin-left: -2.4px;
+  margin-top: -8.33333333px;
+  width: 5px;
+  height: 35px;
+  transform: translateY(-300px);
+  backface-visibility: hidden;
+  animation: in 500ms 6s ease-out forwards;
+}
+
+.bdaycake:after,
+.bdaycake:before {
+  background: rgba(255, 0, 0, 0.4);
+  content: "";
+  position: relative;
+  width: 100%;
+  height: 2.22222222px;
+}
+
+.bdaycake:after {
+  top: 25%;
+  left: 0;
+}
+
+.bdaycake:before {
+  top: 45%;
+  left: 0;
+}
+
+/* ============================================== Fire
+*/
+
+.blow {
+  border-radius: 100%;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -2.6px;
+  width: 6.66666667px;
+  height: 18px;
+}
+
+.blow:nth-child(1) {
+  animation: blow 2s 6.5s infinite;
+}
+
+.blow:nth-child(2) {
+  animation: blow 1.5s 6.5s infinite;
+}
+
+.blow:nth-child(3) {
+  animation: blow 1s 6.5s infinite;
+}
+
+.blow:nth-child(4) {
+  animation: blow 0.5s 6.5s infinite;
+}
+
+.blow:nth-child(5) {
+  animation: blow 0.2s 6.5s infinite;
+}
+
+/* ============================================== Animation Fire
+*/
+
+@keyframes blow {
+
+  0%,
+  100% {
+    background: rgba(254, 248, 97, 0.5);
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    background: rgba(255, 50, 0, 0.1);
+    box-shadow: 0 0 40px 20px rgba(248, 233, 209, 0.2);
+    transform: translateY(-20px) scale(0);
+  }
+}
+
+@keyframes in {
+  to {
+    transform: translateY(0);
+  }
+
+}
+
+/* ###################Cake Button####################### */
+
+.cake-section {
+  text-align: center;
+}
+
+.cake-section a {
+  padding: 1em;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+/* #####################FOOTER#################################### */
+
+.footer {
+  height: 7rem;
+  padding: 40px;
+  background-color: #323036;
+}
+
+.quote {
+  text-align: center;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.madeby {
+  margin-top: 8px;
+  color: #ffffff;
+}
+
+.showcase{
+  display: flex;
+}
+
+.video{
+  margin-left: 200px;
+  margin-top : 50px;
+  width: 800px;
+  height: 400px;
+}
+
+/* ######################MEDIA QUERIES###################### */
+@media (max-width:1200px) {
+  html {
+    font-size: 70%;
+    /*8px*/
+  }
+
+  .row {
+    height: auto;
+    width: 100%;
+  }
+
+  .row .img-box,
+  .row .text-box {
+    /*DOUBTTTTTTTTTT why not without row?*/
+    float: none;
+    width: 100%;
+
+  }
+
+  .img-box img {
+    width: 100%;
+  }
+
+  .footer {
+    height: 16rem;
+    padding: 20px;
+  }
+
+  .madeby {
+    margin-top: 16px;
+  }
+
+  .remove {
+    display: none;
+  }
+
+  .video{
+    margin : 10%;
+    height: 40vh;
+    width: 80%;
+  }
+  .pic-cards .pics{
+    width: 50%;
+    height: 300px;
+  }
+
+  
+}
+
+@media (max-width:500px){
+  .video{
+    margin: 10%;
+    height: 30vh;
+    width: 80%;
+  }
+}
