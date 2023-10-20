@@ -1,0 +1,42 @@
+/* styles.css */
+
+/* Add styles here to customize the appearance of your app */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+@media (max-width: 500px) {
+    textarea {
+        height: 100px;
+        line-height: 1.25;
+    }
+
+}
+
+textarea {
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    color: #000000;
+    padding: 8px;
+    font-family: courier new;
+}
+
+body {
+    background: url("https://cdn.discordapp.com/attachments/716523839634407436/854051136515997746/v384-ning-07b-gradientbg_2.png");
+    background-size: cover;
+    background-position: center;
+    font-family: 'Rubik', sans-serif !important;
+}
+
+#whole {
+    text-align: center;
+}
+
+input {
+    background-color: #000;
+    color: #000000;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+}
