@@ -145,11 +145,11 @@ canvas {
   transition: transform 300ms ease-in-out;
 }
 
-.btn-tutorialspoint:hover {
+.btn-youtube-tech:hover {
   border: #00ff88 2px solid;
   background-color: #00ff88;
   color: #b500ff;
-  transform: scale(1.1);
+  
 }
 
 .active {
