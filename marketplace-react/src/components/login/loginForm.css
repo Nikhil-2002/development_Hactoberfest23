@@ -1,0 +1,64 @@
+.unselected {
+  background-color: #f5f5f5 !important;
+  color: #818181 !important;
+}
+
+.form-button {
+  padding: "10px 25px";
+  font-weight: "bold";
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  margin-block-start: 20px;
+}
+
+.login-form,
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-block: 15px 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 10px;
+  width: 100%;
+}
+
+.button-container button {
+  width: stretch;
+}
+
+.check-box label {
+  margin-inline-start: 7px;
+}
+
+.last-layer {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 20px 20px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.agree-terms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 10px 20px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.3);
+}

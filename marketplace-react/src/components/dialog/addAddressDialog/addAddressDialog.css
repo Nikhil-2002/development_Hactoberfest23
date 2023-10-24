@@ -1,0 +1,30 @@
+.add-address-form {
+  width: 500px;
+}
+
+.parallel-fields {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.address-actions-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-start: 17px;
+}
+
+.state-select {
+  border: solid 1px #aaa;
+  border-radius: 3px;
+  height: 40.5px;
+  outline: none;
+  margin-block-start: 13.5px;
+  padding-inline: 7px;
+  font-size: 1em;
+}
+
+.sumbit-address-button {
+  text-transform: none;
+}
