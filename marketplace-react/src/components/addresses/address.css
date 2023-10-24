@@ -1,0 +1,66 @@
+.add-address-button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-address-button {
+  text-transform: none;
+}
+
+.individual-address-container {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 30px;
+  padding: 25px 40px;
+  border: 0.1px solid rgb(40 37 37);
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 25%) 0 0.5px 1px 0;
+}
+
+.individual-address-container p,
+.individual-address-container h4 {
+  margin-block: 3px;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: "Source Sans";
+  font-size: 17px;
+}
+
+.address-ph {
+  display: flex;
+  flex-direction: row;
+  column-gap: 3px;
+  align-items: center;
+}
+
+.address-actions-button-container {
+  display: flex;
+  column-gap: 15px;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.set-as-default-button {
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: "Source Sans";
+  font-size: 15px;
+  margin-block-start: 10px;
+  color: black;
+
+  /* color: rgb(23, 89, 164); */
+}
+
+.proceed-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-block-start: 20px;
+}
+
+.selected {
+  border: 0.1px solid #0570de !important;
+  background-color: #dee9fa;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 3%), 0 3px 6px rgb(0 0 0 / 2%),
+    0 0 0 1.5px #0570de !important;
+}
