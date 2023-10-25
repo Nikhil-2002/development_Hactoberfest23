@@ -1,0 +1,143 @@
+/* Reset some default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body,
+h1,
+h2,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat';
+    background-color: #111111;
+    color: #f7f7f7;
+}
+
+/* Style the navigation menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    align-items: center;
+    padding-right: 50px;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #f7f7f7;
+
+    &:hover {
+        color: antiquewhite;
+        text-decoration: underline;
+    }
+}
+
+nav .logo {
+    display: flex;
+    align-items: end;
+    padding-left: 20px;
+}
+
+/* Style the main content */
+main {
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 70dvh;
+    flex-wrap: wrap;
+}
+
+.hero h1 {
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.hero p {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.about {
+    padding: 50px;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
+.about p,
+ul {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.gallery{
+    text-align: center;
+    font-size: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px; 
+}
+
+.gallery-item {
+    width: 100%;
+    height: 100%; 
+}
+
+/* Adjust the number of columns for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* Make images responsive */
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Style the footer */
+footer {
+    text-align: center;
+
+    padding: 10px;
+}
+#footer h2{
+    text-align: center;
+    font-size: 40px;
+}
+.social-media a{
+    text-decoration: none;
+    color: #f7f7f7;
+
+    &:hover {
+        color: antiquewhite;
+        text-decoration: underline;
+    }
+}
