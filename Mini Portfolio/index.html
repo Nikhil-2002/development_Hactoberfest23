@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Home</button>
+    <section class="section" id="home">
+        <div class="section-1">
+            <div class="mr">
+                <img src="Me.JPG" alt="Myself" style="height: 200px; width: 200px;">
+                <h2>Mubarak Andrabi</h2>
+                <p> &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Islamabad, Pakistan.</p>
+                <a href="https://twitter.com/AndrabiMubarak"><i class="fab fa-twitter"></i></a>
+                <a href="https://github.com/Mubicool"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+        <div class="section-2">
+            <a href="#about"><h2>About</h2></a>
+            <a href="#experience"><h2>Experience</h2></a>
+            <a href="#skills"><h2>Skills</h2></a>
+            <a href="#projects"><h2>Projects</h2></a>
+            <a href="#contact"><h2>Contact</h2></a>
+        </div>
+    </section>
+
+
+   
+
+    <script>
+        const sections = document.querySelectorAll('.section');
+        let currentSectionIndex = 0;
+
+        const makeSectionActive = (index) => {
+            sections.forEach((section) => {
+                section.classList.remove('active');
+            });
+            sections[index].classList.add('active');
+        };
+
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+                event.preventDefault();
+
+                if (event.key === 'ArrowDown') {
+                    currentSectionIndex = (currentSectionIndex + 1) % sections.length;
+                } else {
+                    currentSectionIndex = (currentSectionIndex - 1 + sections.length) % sections.length;
+                }
+
+                sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+                makeSectionActive(currentSectionIndex);
+            }
+        });
+
+        window.addEventListener('wheel', (event) => {
+            event.preventDefault();
+
+            const delta = Math.sign(event.deltaY);
+
+            if (delta === 1) {
+                currentSectionIndex = (currentSectionIndex + 1) % sections.length;
+            } else {
+                currentSectionIndex = (currentSectionIndex - 1 + sections.length) % sections.length;
+            }
+
+            sections[currentSectionIndex].scrollIntoView({ behavior: 'smooth' });
+            makeSectionActive(currentSectionIndex);
+        });
+
+        const slideshowContainers = document.querySelectorAll('.slideshow-container');
+
+        slideshowContainers.forEach((container) => {
+            const images = container.querySelectorAll('img');
+            let currentIndex = 0;
+
+            const showImage = (index) => {
+                images.forEach((image) => {
+                    image.classList.remove('active');
+                });
+                images[index].classList.add('active');
+            };
+
+            const nextImage = () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            };
+
+            setInterval(nextImage, 2000);
+        });
+        // Get the button:
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+        } else {
+        mybutton.style.display = "none";
+        }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }   
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    </script>
+
+</body>
+</html>
