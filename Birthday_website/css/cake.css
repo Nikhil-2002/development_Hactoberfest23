@@ -7,200 +7,116 @@ body {
     overflow: hidden;
 }
 
-
 .cake1 {
     position: absolute;
-    margin-left: 5px;
-    margin-top: 5px;
+    left: 200px;
+    top: 8%;
+    margin: 5px;
     width: 100px;
     height: 100px;
 }
 
-/* ============================================== BASE
-  */
 .cake1:after {
-    background: #ebe3e1;
-    border-radius: 100px;
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100px;
     height: 2px;
+    background: #ebe3e1;
+    border-radius: 100px;
 }
 
-/* ============================================== Candle
-  */
-.velas {
+.velas, .velas:after, .velas:before {
+    position: absolute;
     background: #ffffff;
     border-radius: 100%;
-    position: absolute;
+}
+
+.velas {
     top: 50%;
     left: 50%;
-    margin-left: -2.5px;
-    margin-top: -8.333333333333334px;
     width: 5px;
-    height: 16.666666666666668px;
+    height: 16.67px;
+    margin-left: -2.5px;
+    margin-top: -8.33px;
 }
 
-.velas:after,
-.velas:before {
-    background: rgba(255, 0, 0, 0.4);
+.velas:after, .velas:before {
     content: "";
-    position: absolute;
     width: 100%;
-    height: 2.2222222222222223px;
+    height: 2.22px;
+    background: rgba(255, 0, 0, 0.4);
 }
 
-.velas:after {
-    top: 25%;
-    left: 0;
-}
+.velas:after { top: 25%; }
+.velas:before { top: 45%; }
 
-.velas:before {
-    top: 45%;
-    left: 0;
-}
-
-/* ============================================== Fire
-  */
 .fuego {
-    border-radius: 100%;
-    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
     position: absolute;
     top: -12px;
     left: 50%;
-    margin-left: -3.3333333333333335px;
-    width: 6.666666666666667px;
+    margin-left: -3.33px;
+    width: 6.67px;
     height: 12.5px;
+    border-radius: 100%;
+    box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
 }
 
-.fuego:nth-child(1) {
-    -webkit-animation: fuego 2s infinite;
+.fuego:nth-child(1) { animation: fuego 2s infinite; }
+.fuego:nth-child(2) { animation: fuego 1.5s infinite; }
+.fuego:nth-child(3) { animation: fuego 1s infinite; }
+.fuego:nth-child(4) { animation: fuego 0.5s infinite; }
+.fuego:nth-child(5) { animation: fuego 0.2s infinite; }
+
+@keyframes fuego {
+    0%, 100% { background: rgba(254, 248, 97, 0.5); transform: translateY(0) scale(1); }
+    50% { background: rgba(255, 50, 0, 0.1); transform: translateY(-20px) scale(0); }
 }
 
-.fuego:nth-child(2) {
-    -webkit-animation: fuego 1.5s infinite;
-}
-
-.fuego:nth-child(3) {
-    -webkit-animation: fuego 1s infinite;
-}
-
-.fuego:nth-child(4) {
-    -webkit-animation: fuego 0.5s infinite;
-}
-
-.fuego:nth-child(5) {
-    -webkit-animation: fuego 0.2s infinite;
-}
-
-/* ============================================== Animation Fire
-  */
-@-webkit-keyframes fuego {
-    0% {
-        background: rgba(254, 248, 97, 0.5);
-        -webkit-transform: translateY(0) scale(1);
-    }
-
-    50% {
-        background: rgba(255, 50, 0, 0.1);
-        -webkit-transform: translateY(-20px) scale(0);
-    }
-
-    100% {
-        background: rgba(254, 248, 97, 0.5);
-        -webkit-transform: translateY(0) scale(1);
-    }
-}
-
-/* ============================================== Frosting
-  */
 .cobertura {
-    background: #ece7e3;
-    border-radius: 50px;
     position: absolute;
     top: 60%;
     left: 50%;
-    margin-left: -27.77777777777778px;
-    margin-top: -5px;
-    width: 55.55555555555556px;
+    width: 55.56px;
     height: 12.5px;
-    z-index: 10;
+    background: #ece7e3;
+    border-radius: 50px;
+    margin-left: -27.78px;
 }
 
-.cobertura:after,
-.cobertura:before {
-    background: #ece7e3;
-    border-radius: 100px;
+.cobertura:after, .cobertura:before {
     content: "";
     position: absolute;
     width: 5px;
     height: 10px;
+    background: #ece7e3;
+    border-radius: 100px;
 }
 
-.cobertura:after {
-    top: 6.666666666666667px;
-    right: 14.285714285714286px;
-}
+.cobertura:after { top: 6.67px; right: 14.29px; }
+.cobertura:before { top: 10px; right: 9.09px; }
 
-.cobertura:before {
-    top: 10px;
-    right: 9.090909090909092px;
-}
-
-/* ============================================== BIZCOCHO
-  */
 .bizcocho {
-    background: #6d3826;
     position: absolute;
     bottom: 0;
     left: 50%;
-    margin-left: -25px;
     width: 50px;
-    height: 33.333333333333336px;
+    height: 33.33px;
+    background: #6d3826;
+    margin-left: -25px;
 }
 
-.bizcocho:after,
-.bizcocho:before {
-    background: rgba(236, 231, 227, 0.6);
+.bizcocho:after, .bizcocho:before {
     content: "";
     position: absolute;
     width: 100%;
     height: 5px;
+    background: rgba(236, 231, 227, 0.6);
 }
 
-.bizcocho:after {
-    top: 30%;
-    left: 0;
-}
-
-.bizcocho:before {
-    top: 60%;
-    left: 0;
-}
-
-
-.cake1 {
-    left: 200px;
-    top: 8%;
-}
-
-
-/* ###############Media Queries##################### */
-@media (max-width:768px) {
-    #birthday-cake {
-       margin-right: 30px;
-    }
-    .cake1 {
-        left: 150px;    
-        top: 6%;
-    }
-}
-
-
-
-
+.bizcocho:after { top: 30%; }
+.bizcocho:before { top: 60%; }
 
 #birthday-cake {
     position: relative;
@@ -230,30 +146,15 @@ body {
 }
 
 .cake:before,
-.cake:after {
+.cake:after, .middle:before {
     content: "";
     position: absolute;
-}
-
-.cake:before,
-.middle,
-.middle:before {
-    border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
+    border-radius: 50% / 0% 0% 100% 100%;
     width: 350px;
-    height: 50px;
 }
 
-.cake:before {
-    background-color: #ddb892;
-    top: 130px;
-}
-
-.cake:after {
-    background-color: #b08968;
-    width: 350px;
-    height: 30px;
-    top: 50px;
-}
+.cake:before { background-color: #ddb892; top: 130px; height: 50px; }
+.cake:after { background-color: #b08968; top: 50px; height: 30px; }
 
 .middle {
     position: absolute;
@@ -263,8 +164,6 @@ body {
 }
 
 .middle:before {
-    content: "";
-    position: absolute;
     background-color: #ddb892;
     top: -35px;
 }
@@ -287,8 +186,8 @@ body {
     background-color: #7f5539;
     top: 0;
     z-index: 1;
-    border-radius: 50% 50% 50% 50% / 0% 0% 100% 100%;
-    box-shadow: 49px 20px #7f5539, 98px 25px #7f5539, 147px 30px #7f5539, 196px 25px #7f5539, 245px 20px #7f5539, 295px 0 #7f5539, 0px 4px #fff, 49px 24px #fff, 98px 29px #fff, 147px 34px #fff, 196px 29px #fff, 245px 24px #fff, 295px 4px #fff;
+    border-radius: 50% / 0% 0% 100% 100%;
+    box-shadow: 49px 20px #7f5539, 98px 25px #7f5539, 147px 30px #7f5539, 196px 25px #7f5539, 245px 20px #7f5539, 295px 0 #7f5539, 0px 4px #fff, 49px 24px #fff, 98px 29px #fff, 147px 34px #fff, 196px 29px #7f5539, 245px 24px #fff, 295px 4px #fff;
 }
 
 .chocs:before {
@@ -312,27 +211,17 @@ body {
     box-shadow: 50px 20px #0081a7, -50px 20px #0081a7;
 }
 
-.candles:before {
+.candles:before, .candles:after {
     content: "";
     position: absolute;
     width: 30px;
     height: 10px;
     background-color: #0081a7;
     border-radius: 50%;
-    top: -5px;
-    box-shadow: 0 80px #0081a7, -50px 20px #0081a7, -50px 100px #0081a7, 50px 20px #0081a7, 50px 100px #0081a7, inset 2px -1px #fff;
 }
 
-.candles:after {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 10px;
-    border-radius: 50%;
-    top: 15px;
-    left: 50px;
-    box-shadow: inset 2px -1px #fff;
-}
+.candles:before { top: -5px; }
+.candles:after { top: 15px; left: 50px; }
 
 .shadows {
     position: absolute;
@@ -366,50 +255,21 @@ body {
     border-radius: 0% 100% 50% 50% / 100% 6% 10% 0%;
 }
 
-
-.flame,
-.flame:before,
-.flame2,
-.flame2:before,
-.flame3,
-.flame3:before {
+.flame, .flame:before {
     position: absolute;
     border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
-}
-
-.flame,
-.flame3,
-.flame2 {
-    cursor: pointer;
     width: 30px;
     height: 30px;
-    transform: rotate(-45deg);
-    z-index: 4;
     background-color: rgba(252, 191, 73, .8);
     transition: .5s;
     animation: flame .5s infinite;
 }
 
-.flame {
-    top: -40px;
-}
+.flame { top: -40px; }
+.flame2 { top: -20px; left: -50px; }
+.flame3 { top: -20px; left: 50px; }
 
-.flame2,
-.flame3 {
-    top: -20px;
-}
-
-.flame2 {
-    left: -50px;
-}
-
-.flame3 {
-    left: 50px;
-}
-
-.flame:before,
-.flame2:before,
-.flame3:before {
+.flame:before, .flame2:before, .flame3:before {
     content: "";
     background-color: rgba(247, 127, 0, .4);
     width: 20px;
@@ -418,23 +278,12 @@ body {
     left: 5px;
 }
 
-
 @keyframes flame {
-
-    0%,
-    25%,
-    100% {
-        transform: scaleY(1) rotate(-45deg);
-    }
-
-    50%,
-    75% {
-        transform: scaleY(1.1) rotate(-45deg);
-    }
+    0%, 25%, 100% { transform: scaleY(1); }
+    50%, 75% { transform: scaleY(1.1); }
 }
 
-.text,
-.text2 {
+.text, .text2 {
     position: absolute;
     color: white;
     font-family: 'Brush Script MT', cursive;
@@ -456,4 +305,14 @@ body {
     width: 300px;
     top: 105px;
     left: -140px;
+}
+
+@media (max-width: 768px) {
+    #birthday-cake {
+        margin-right: 30px;
+    }
+    .cake1 {
+        left: 150px;    
+        top: 6%;
+    }
 }
