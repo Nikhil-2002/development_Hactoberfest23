@@ -98,14 +98,12 @@ canvas {
   justify-content: space-around;
   font-weight: bolder;
   border: #b500ff 2px solid;
-  transition: transform 300ms ease-in-out;
 }
 
-.btn-javapoint:hover {
+.btn-youtube-game:hover {
   border:#fe1580 2px solid;
   background-color: #fe1580;
   color: #b500ff;
-  transform: scale(1.1);
 }
 
 .btn-youtube-linux {
@@ -134,22 +132,6 @@ canvas {
   border: #00ff88 2px solid;
   background-color: #00ff88;
   color: #b500ff;
-}
-
-.btn-tutorialspoint {
-  color: #00ff88;
-  background-color: #191919;
-  justify-content: space-around;
-  font-weight: bolder;
-  border: #b500ff 2px solid;
-  transition: transform 300ms ease-in-out;
-}
-
-.btn-tutorialspoint:hover {
-  border: #00ff88 2px solid;
-  background-color: #00ff88;
-  color: #b500ff;
-  transform: scale(1.1);
 }
 
 .active {

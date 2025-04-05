@@ -34,28 +34,12 @@ canvas {
   margin-bottom: 20%;
 }
 
-.btn-anime {
-  color: #2496ed;
+. color: #2496ed;
+ btn-anime {
   background-color: #191919;
   justify-content: space-around;
   font-weight: bolder;
   border: #b500ff 2px solid;
-}
-
-.btn-anime-2 {
-  color: #2496ed;
-  background-color: #191919;
-  justify-content: space-around;
-  font-weight: bolder;
-  border: #b500ff 2px solid;
-  transition: transform 300ms ease-in-out;
-}
-
-.btn-anime-2:hover {
-  border: #2496ed 2px solid;
-  background-color: #2496ed;
-  color: #b500ff;
-  transform: scale(1.1);
 }
 
 .btn-anime:hover {
@@ -92,22 +76,6 @@ canvas {
   color: #b500ff;
 }
 
-.btn-javapoint{
-  color: #fe1580;
-  background-color: #191919;
-  justify-content: space-around;
-  font-weight: bolder;
-  border: #b500ff 2px solid;
-  transition: transform 300ms ease-in-out;
-}
-
-.btn-javapoint:hover {
-  border:#fe1580 2px solid;
-  background-color: #fe1580;
-  color: #b500ff;
-  transform: scale(1.1);
-}
-
 .btn-youtube-linux {
   color: #830d75;
   background-color: #191919;
@@ -134,22 +102,6 @@ canvas {
   border: #00ff88 2px solid;
   background-color: #00ff88;
   color: #b500ff;
-}
-
-.btn-tutorialspoint {
-  color: #00ff88;
-  background-color: #191919;
-  justify-content: space-around;
-  font-weight: bolder;
-  border: #b500ff 2px solid;
-  transition: transform 300ms ease-in-out;
-}
-
-.btn-tutorialspoint:hover {
-  border: #00ff88 2px solid;
-  background-color: #00ff88;
-  color: #b500ff;
-  transform: scale(1.1);
 }
 
 .active {
