@@ -1,0 +1,41 @@
+.button {
+  border: none;
+  height: 40px;
+  background-color: #1976d2;
+  color: white;
+  font-size: medium;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%),
+    0 1px 5px 0 rgba(0 0 0 / 12%);
+  animation: ripple 850ms;
+}
+
+.button:hover {
+  box-shadow: rgb(0 0 0 / 20%) 0 3px 6px 0;
+  cursor: pointer;
+}
+
+.button:disabled {
+  background-color: #ccc;
+  color: #666;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.text-button {
+  background-color: transparent;
+  border: none;
+  color: #125fd2;
+  font-weight: normal;
+  box-shadow: none;
+  text-transform: none;
+  padding: 0;
+  height: fit-content;
+}
+
+.text-button:hover {
+  box-shadow: none;
+}

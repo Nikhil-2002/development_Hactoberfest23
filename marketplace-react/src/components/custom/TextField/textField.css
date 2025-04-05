@@ -1,0 +1,118 @@
+.text-field {
+  display: block;
+  width: 100%;
+  margin-block: 5px 0;
+}
+
+.text-field > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: inherit;
+  border: solid 1px #aaa;
+  border-radius: 3px;
+}
+
+.text-field input {
+  width: 100%;
+  appearance: none;
+  text-align: inherit;
+  padding: 10px;
+  border: none;
+  font-size: 1em;
+  background-color: white;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 3px;
+  transition: background-color ease 250ms;
+}
+
+div.line {
+  width: 100%;
+  margin-block-start: -1px;
+  position: relative;
+  height: 1px;
+  background: transparent;
+  border-color: transparent;
+}
+
+div.line > div {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  transform: scale(0, 1);
+  height: 2px;
+  margin-block-start: -1px;
+  background-color: #2875c7;
+  transition: all ease 250ms;
+}
+
+div.text-field.focus input {
+  background-color: #dee9fa !important;
+}
+
+div.text-field.focus div.line > div {
+  transform: scale(1, 1) !important;
+}
+
+div.text-field.error div.line > div {
+  background: red !important;
+}
+
+div.text-field.error input {
+  background: rgb(255 0 0 / 12.5%) !important;
+}
+
+.toggle-password-button {
+  width: fit-content;
+  height: fit-content;
+  align-self: flex-end;
+  padding: 8px 10px 7px;
+  box-shadow: none;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  color: grey;
+  position: absolute;
+}
+
+.toggle-password-button:hover {
+  box-shadow: none;
+  border: none;
+}
+
+.toggle-icon {
+  font-size: 1.2rem !important;
+}
+
+.label-container {
+  position: relative;
+  height: 17px;
+  background-color: transparent;
+  border: none !important;
+  z-index: -10;
+}
+
+.field-label {
+  position: absolute;
+  font-size: 13px !important;
+  font-weight: bold;
+  background-color: transparent !important;
+  z-index: 1000;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  /* color: #3c69ef; */
+}
+
+.error-container {
+  border: none !important;
+  height: 20px;
+}
+
+.error-message {
+  font-size: small;
+  color: red;
+  margin-block: 2px 0;
+  margin-inline-start: 3px;
+}
