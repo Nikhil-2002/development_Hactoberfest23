@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alarm Clock</title>
+
+    <!-- External CSS File -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body onload="initClock()">
+    <div class="alarm">
+      <div class="datetime">
+        <div class="date">
+          <span id="dayName">Day</span>, <span id="month">Month</span>,
+          <span id="dayNum">00</span>,
+          <span id="year">Year</span>
+        </div>
+        <div class="time">
+          <span id="hour">00</span>: <span id="minutes">00</span>:
+          <span id="seconds">00</span>:
+          <span id="period">AM</span>
+        </div>
+        <button id="stopAlarm" onclick="stopAlarm()">Stop Alarm</button>
+      </div>
+
+      <hr />
+
+      <div class="setAlarm">
+        <div class="column">
+          <select>
+            <option value="setHour" selected hidden>Hour</option>
+          </select>
+        </div>
+
+        <div class="column">
+          <select>
+            <option value="setMinute" selected hidden>Minute</option>
+          </select>
+        </div>
+
+        <div class="column">
+          <select>
+            <option value="AM/PM" selected hidden>AM/PM</option>
+          </select>
+        </div>
+
+        <button id="btn-setAlarm" type="submit">Set Alarm</button>
+      </div>
+
+      <hr />
+
+      <h3 id="alarm-h3"></h3>
+
+      <div class="alarmList"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
