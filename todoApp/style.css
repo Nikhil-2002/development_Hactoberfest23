@@ -1,0 +1,75 @@
+body {
+  font-family: Arial;
+  background-color: rgb(253, 224, 186);
+}
+#main-heading {
+  text-align: center;
+}
+
+.input-conatiner{
+position: sticky;
+top: 0px;
+background-color: rgb(255, 226, 188);
+margin: 2px 0px;
+}
+
+#container {
+  margin-top: 200px;
+  width: 500px;
+  min-height: 240px;
+  max-height: 380px;
+  justify-self: center;
+  padding-bottom: 10px;
+  background-color: rgb(255, 226, 188);
+
+  border: 4px solid brown;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.416);
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 200px 150px 100px;
+  column-gap: 10px;
+  align-items: center;
+  row-gap: 10px;
+  margin-top: 5px;
+}
+
+#todo-input,#todo-date {
+  font-size: 10px;
+  padding: 10px 5px;
+  cursor: text pointer;
+}
+
+.btn-delete {
+  background-color: rgb(114, 5, 5);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 0px;
+  cursor: pointer;
+}
+
+.btn-todo {
+  background-color: rgb(24, 143, 8);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 0px;
+  cursor: pointer;
+}
+
+.btn-todo:hover {
+  background-color: #00b303;
+  font-weight: bold;
+ }
+
+ .btn-delete:hover {
+  background-color: #520008;
+  font-weight: bold;
+ }
+ 
