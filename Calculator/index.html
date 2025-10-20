@@ -2,43 +2,65 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Ensures compatibility with older versions of Internet Explorer -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Makes the website responsive on all devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Document</title>
+    
+    <!-- Links external CSS file for styling -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <!-- Page header section -->
         <div class="heading">
             <h1>Calculator</h1>
         </div>
+
+        <!-- Main calculator container -->
         <div id="calculator">
-            <!-- <div id="screen"></div> -->
+            <!-- Display screen for input and results -->
             <input type="text" id="screen">
+
+            <!-- Container for all calculator buttons -->
             <div class="controls">
+                <!-- Row 1: brackets, clear, and backspace -->
                 <button class="btn" id="btn-1">(</button>
                 <button class="btn" id="btn-2">)</button>
-                <button class="btn" id="btn-3">C</button>
-                <button class="btn" id="btn-4">B</button>
+                <button class="btn" id="btn-3">C</button> <!-- Clear screen -->
+                <button class="btn" id="btn-4">B</button> <!-- Backspace -->
+
+                <!-- Row 2: numbers and multiplication -->
                 <button class="btn" id="btn-5">7</button>
                 <button class="btn" id="btn-6">8</button>
                 <button class="btn" id="btn-7">9</button>
-                <button class="btn" id="btn-8">X</button>
+                <button class="btn" id="btn-8">X</button> <!-- Multiplication -->
+
+                <!-- Row 3: numbers and subtraction -->
                 <button class="btn" id="btn-9">4</button>
                 <button class="btn" id="btn-10">5</button>
                 <button class="btn" id="btn-11">6</button>
                 <button class="btn" id="btn-12">-</button>
+
+                <!-- Row 4: numbers and addition -->
                 <button class="btn" id="btn-13">1</button>
                 <button class="btn" id="btn-14">2</button>
                 <button class="btn" id="btn-15">3</button>
                 <button class="btn" id="btn-16">+</button>
+
+                <!-- Row 5: zero, decimal, division, and equals -->
                 <button class="btn" id="btn-17">0</button>
                 <button class="btn" id="btn-18">.</button>
                 <button class="btn" id="btn-19">/</button>
-                <button class="btn" id="btn-20">=</button>
+                <button class="btn" id="btn-20">=</button> <!-- Evaluate expression -->
             </div>
         </div>
     </div>
+
+    <!-- Links external JavaScript file for calculator logic -->
+    <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
 </html>
+

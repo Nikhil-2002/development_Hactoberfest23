@@ -1,47 +1,61 @@
-*{
+/* Reset default padding and margin for all elements */
+* {
     padding: 0;
     margin: 0;
 }
-.container{
+
+/* Main container that wraps the calculator and heading */
+.container {
     padding: 20px;
 }
-.heading{
+
+/* Center the "Calculator" heading text */
+.heading {
     text-align: center;
 }
-#calculator{
-    border: 4px solid black;
-    border-radius: 20px;
-    margin-right: 550px;
+
+/* Main calculator box styling */
+#calculator {
+    border: 4px solid black;        /* Outer border for structure */
+    border-radius: 20px;            /* Rounded corners for smooth design */
+    margin-right: 550px;            /* Centering margins (could also use flexbox for responsiveness) */
     margin-left: 550px;
-    margin-top: 50px ;
-    margin-bottom: 80px ;
-    height: 500px;
-    padding: 15px;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    height: 500px;                  /* Fixed height for calculator body */
+    padding: 15px;                  /* Inner spacing */
     padding-bottom: 0px;
-    background-color: #8584a2;
+    background-color: #8584a2;      /* Soft purple background */
 }
-#screen{
-    border: 2px solid black;
-    box-sizing: border-box;
-    padding: 10px;
-    width: 339px;
-    font-size: 30px;
-    border-radius: 20px;
-    height: 70px;
-    margin-bottom: 10px;
-    background-color: rgb(245, 245, 204);
+
+/* Display screen (input box) styling */
+#screen {
+    border: 2px solid black;        /* Black border for visibility */
+    box-sizing: border-box;         /* Ensures padding doesn’t affect width */
+    padding: 10px;                  /* Inner spacing for text */
+    width: 339px;                   /* Fixed width to align with buttons */
+    font-size: 30px;                /* Large text for readability */
+    border-radius: 20px;            /* Rounded corners */
+    height: 70px;                   /* Height of display area */
+    margin-bottom: 10px;            /* Space below screen */
+    background-color: rgb(245, 245, 204); /* Light yellow screen background */
 }
-.controls{
+
+/* Container for all buttons */
+.controls {
     box-sizing: border-box;
-    /* border: 4px solid black; */
+    /* border: 4px solid black;  Uncomment for visual debugging */
     height: 400px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    padding: 5px ;
+    display: grid;                        /* Use grid layout for buttons */
+    grid-template-columns: auto auto auto auto; /* 4 columns layout */
+    padding: 5px;                         /* Inner spacing around buttons */
 }
-.btn{
-    margin: 5px;
-    font-size: 20px;
-    border-radius: 16px;
-    padding: 4px;
+
+/* Styling for individual calculator buttons */
+.btn {
+    margin: 5px;              /* Space between buttons */
+    font-size: 20px;          /* Readable button text */
+    border-radius: 16px;      /* Smooth rounded edges */
+    padding: 4px;             /* Inner spacing for comfort clicking */
 }
+
