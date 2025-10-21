@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Neon 404</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+      .neon-cursor {
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            border: 2px solid #ff005d;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            transition: width 0.2s, height 0.2s;
+            filter: url(#glow);
+            box-shadow: 0 0 10px #ff005d, inset 0 0 10px #ff005d;
+            animation: hueRotate 6s ease-in-out 3s infinite;
+        }
+    </style>
 </head>
 <body>
     <div></div>
@@ -37,5 +54,32 @@
 </svg>
 
 <h2>Page Not Found</h2>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+        // Create cursor element
+        const cursor = document.createElement('div');
+        cursor.classList.add('neon-cursor');
+        document.body.appendChild(cursor);
+
+        // Update cursor position
+        document.addEventListener('mousemove', function(e) {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Add hover effect on interactive elements
+        document.querySelectorAll('a, button, h2').forEach(elem => {
+            elem.addEventListener('mouseenter', () => {
+                cursor.style.width = '30px';
+                cursor.style.height = '30px';
+            });
+            
+            elem.addEventListener('mouseleave', () => {
+                cursor.style.width = '20px';
+                cursor.style.height = '20px';
+            });
+        });
+    });
+</script>
 </body>
 </html>
