@@ -105,3 +105,38 @@ p{
     background-color: #ff2020;
     color: white;
 }
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(91, 68, 47, 0.95);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    text-align: center;
+    color: white;
+}
+
+.popup h2 {
+    margin-bottom: 20px;
+    color: #f4b17a;
+}
+
+.retry-button {
+    background-color: #f4b17a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.retry-button:hover {
+    background-color: #f59575;
+}
