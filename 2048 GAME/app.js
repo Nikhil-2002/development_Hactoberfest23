@@ -31,6 +31,8 @@ function setGame() {
     setTwo();
     setTwo();
 
+    updateProgressBar(score);
+
 }
 
 function updateTile(tile, num) {
@@ -66,6 +68,8 @@ document.addEventListener('keyup', (e) => {
         setTwo();
     }
     document.getElementById("score").innerText = score;
+    updateProgressBar();
+
     if(score>=2048){
         document.getElementById("won").innerText = "🎉CONGRATULATION'S YOU WON🥳";
     }
@@ -178,4 +182,22 @@ function hasEmptyTile() {
     }
  
    return false;
+}
+
+function getMaxTile() {
+    let maxTile = 0;
+    for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < columns; c++) {
+            if (board[r][c] > maxTile) maxTile = board[r][c];
+        }
+    }
+    return maxTile;
+}
+
+function updateProgressBar() {
+    const goal = 2048;
+    const bar = document.getElementById("progress-bar");
+    let maxTile = getMaxTile();
+    let progress = Math.min((maxTile / goal) * 100, 100);
+    bar.style.width = progress + "%";
 }
