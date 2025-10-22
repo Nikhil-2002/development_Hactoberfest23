@@ -174,3 +174,6 @@ div{
     filter: hue-rotate(0deg);
   }
 }
+body {
+  cursor: none;
+}
