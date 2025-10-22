@@ -14,6 +14,27 @@ hr {
 p{
     font-weight: bold;
 }
+
+
+.progress-container {
+  height: 20px;
+  width: 80%;               
+  max-width: 400px;         
+  background-color: #dcdcdc;
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+}
+
+#progress-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #ffcc00;
+  border-radius: 10px 0 0 10px;
+  transition: width 0.4s ease;
+}
+
 #board {
     width: 400px;
     height: 400px;
