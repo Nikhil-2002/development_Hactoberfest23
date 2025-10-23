@@ -9,11 +9,11 @@ nav{
     top: 0%;
     left: 0%;
     z-index: 7;
-    background-color: darkblue;
+    background-color: #2C3E50; /* Changed from darkblue */
     display: flex;
     justify-content: space-between;
-   
-    color: white;
+    
+    color: #ECF0F1; /* Changed from white */
     max-width: 100%;
     /* padding: 40px; */
 
@@ -34,23 +34,23 @@ gap: 50px;
 }
 nav ul li{
     list-style: none;
-   transition: .5s;
-  cursor: pointer;
+    transition: .5s;
+    cursor: pointer;
 
 }
 
 nav ul li:hover{
     /* animation: na 1s  ; */
-    background-color: rgb(5, 2, 77);
+    background-color: #34495E; /* Changed hover background */
     border-radius: 10px;
-    color:rgb(225, 225, 225);
+    color: #3498DB; /* Changed hover text color */
     padding: 10px;
     border-style: solid;
 }
 /* @keyframes na{
     0% {
         color:blue;
-         background-color: black;
+        background-color: black;
     }
     100%{
         color: white;
@@ -63,7 +63,7 @@ nav ul li:hover{
 }
 .head{
     text-align: center;
-    color: rgb(231, 223, 223);
+    color: #ECF0F1; /* Changed from rgb(231, 223, 223) */
     position: absolute;
     top: 45%;
     left: 9%;
@@ -75,10 +75,10 @@ nav ul li:hover{
 }
 .main .head .sub{
     font-size: 3rem;
-  margin-top: 35px;
+    margin-top: 35px;
 }
 .part2{
-    color: white;
+    color: #ECF0F1; /* Changed from white */
     margin-top: -10px;
     height: 70%;
     display: flex;
@@ -87,11 +87,11 @@ nav ul li:hover{
     align-items: center;
     line-height: 90px;
     text-align: center;
-    background-color : rgb(40,17, 84)
+    background-color : #2C3E50; /* Changed from rgb(40,17, 84) */
 }
 
 .hm h1{
-  
+   
     display:inline
 }
 .part2 .in{
@@ -101,15 +101,17 @@ nav ul li:hover{
 }
 .part2 button{
     padding: 10px;
-    background-color: red;
-    color: whitesmoke;
+    background-color: #E74C3C; /* Changed from red */
+    color: #ECF0F1; /* Changed from whitesmoke */
+    border: none; /* Added for cleaner look */
+    border-radius: 5px; /* Added for softer edges */
 }
 .mac{
 text-align: center;
 background: linear-gradient(
     to bottom,
-    rgb(40,17, 84) 0%,
-    rgb(40,17, 84) 50%,
+    #2C3E50 0%, /* Changed from rgb(40,17, 84) */
+    #2C3E50 50%,
     white 50%,
     white 100%
 );
@@ -130,9 +132,11 @@ button:hover{
 }
 .p3 button{
     margin-top: 20px;
-    background-color: darkblue;
+    background-color: #3498DB; /* Changed from darkblue */
     color: white;
     padding: 10px;
+    border: none; /* Added for cleaner look */
+    border-radius: 5px; /* Added for softer edges */
 }
 .p4{
     margin-top: 60px;
@@ -173,13 +177,15 @@ button:hover{
 }
 .p6 button{
     margin-top: 20px;
-    background-color: darkblue;
+    background-color: #3498DB; /* Changed from darkblue */
     color: white;
     padding: 10px;
+    border: none; /* Added for cleaner look */
+    border-radius: 5px; /* Added for softer edges */
 }
 .p6 .para{
     padding: 10px;
-    border-bottom: solid grey;
+    border-bottom: 1px solid #BDC3C7; /* Changed from grey */
     
 }
 .fi{
@@ -194,20 +200,22 @@ button:hover{
 }
 
 .p8{
-    background:  rgb(40,17, 84) ;
+    background:  #2C3E50; /* Changed from rgb(40,17, 84) */
     display: flex;
     margin-top: 100px;
-    color: white;
-   justify-content: space-evenly;
+    color: #ECF0F1; /* Changed from white */
+    justify-content: space-evenly;
     flex-direction: row;
 }
 li{
     list-style: none;
 }
-.p9{text-align: center;
-background-color: blue;
-color: aliceblue;
-padding: 10px;}
+.p9{
+    text-align: center;
+    background-color: #3498DB; /* Changed from blue */
+    color: #ECF0F1; /* Changed from aliceblue */
+    padding: 10px;
+}
 
 @media (max-width: 900px){
     .p6{
@@ -225,6 +233,6 @@ padding: 10px;}
 }
 .main .head .sub{
     font-size: 1rem;
-  margin-top: 35px;
+    margin-top: 35px;
 }
 }
