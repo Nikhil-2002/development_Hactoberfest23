@@ -1,33 +1,57 @@
-console.log('welcome to the project');
-shownotes();// whwn the page get refreshed it will show the saved notes
-//if user add notes then add it to local storage
+// Initialize the application and show existing notes
+shownotes();
 
 let addbtn = document.getElementById('addBtn');
 
 addbtn.addEventListener("click", function (e) {
+    try {
+        let addtxt = document.getElementById('addText');
+        if (!addtxt || !addtxt.value.trim()) {
+            alert('Please enter a valid note');
+            return;
+        }
 
-    let addtxt = document.getElementById('addText');
-    let notes = localStorage.getItem("notes");
-    if (notes == null) {
-        notesobj = [];
+        let notesobj = [];
+        let stateobj = [];
+
+        try {
+            const notes = localStorage.getItem("notes");
+            if (notes) {
+                notesobj = JSON.parse(notes);
+            }
+        } catch (error) {
+            console.error('Error reading notes from localStorage:', error);
+            notesobj = [];
+        }
+
+        try {
+            const state = localStorage.getItem("state");
+            if (state) {
+                stateobj = JSON.parse(state);
+            }
+        } catch (error) {
+            console.error('Error reading state from localStorage:', error);
+            stateobj = [];
+        }
+
+        notesobj.push(addtxt.value);
+        stateobj.push(1);
+
+        try {
+            localStorage.setItem("notes", JSON.stringify(notesobj));
+            localStorage.setItem("state", JSON.stringify(stateobj));
+        } catch (error) {
+            console.error('Error saving to localStorage:', error);
+            alert('Failed to save note. Please try again.');
+            return;
+        }
+
+        addtxt.value = '';
+        shownotes();
+    } catch (error) {
+        console.error('Unexpected error:', error);
+        alert('An unexpected error occurred. Please try again.');
     }
-    else {
-        notesobj = JSON.parse(notes);
-    }
-    let state = localStorage.getItem("state");
-    let stateobj;
-    if (state == null) {
-        stateobj = [];
-    }
-    else {
-        stateobj = JSON.parse(state);
-    }
-    notesobj.push(addtxt.value);
-    stateobj.push(1);
-    localStorage.setItem("notes", JSON.stringify(notesobj));
-    localStorage.setItem("state", JSON.stringify(stateobj));
-    addtxt.value = "";//needs to clear the text area
-    shownotes();
 
 });
 
@@ -145,59 +169,58 @@ function deletenotes(id) {
 
 };
 function markugt(id) {
-
-    console.log(id);
-    // let val=document.getElementById("ugt");
-    //let el=document.getElementById("flip");
-
-    // let obj=val.getElementById("ugt")[id];
-    // console.log(val);
-    let noteCards = document.getElementsByClassName('notecard');
-    let arr = localStorage.getItem("state");
-    if (arr == null) { arrobj = []; }
-    else {
-        arrobj = JSON.parse(arr);
-    }
-    Array.from(noteCards).forEach(function (element, idd) {
-        let cardTxt = element.getElementsByTagName("button")[1];
-        if (idd == id) {
-
-            /* if (cardTxt.innerText == "𝙄𝙢𝙥𝙤𝙧𝙩𝙖𝙣𝙩") {
-                
-                 cardTxt.innerText =
-                     "𝙉𝙤𝙩 𝙄𝙢𝙥𝙤𝙧𝙩𝙖𝙣𝙩";
-                     element.style.background="#7bff00";
-                     element.style.color="black";
- 
-                 //val.innerText="𝙉𝙤𝙩 𝙄𝙢𝙥𝙤𝙧𝙩𝙖𝙣𝙩";
-             }
-             else {
- 
-                 cardTxt.innerText = "𝙄𝙢𝙥𝙤𝙧𝙩𝙖𝙣𝙩";
-                 element.style.background="white";
-                 element.style.color="black";
- 
-             }*/
-            if (arrobj[id] == 1) {
-                cardTxt.innerText =
-                    "𝙉𝙤𝙩 𝙄𝙢𝙥𝙤𝙧𝙩𝙖𝙣𝙩";
-                element.style.background = "#7bff00";
-                element.style.color = "black";
-                arrobj[id] = 0;
+    try {
+        // Get current state from localStorage
+        let stateArray = [];
+        try {
+            const state = localStorage.getItem("state");
+            if (state) {
+                stateArray = JSON.parse(state);
             }
-            else {
-
-                cardTxt.innerText = "𝙄𝙢𝙥𝙤𝙧𝙩𝙖𝙣𝙩";
-                element.style.background = "white";
-                element.style.color = "black";
-                arrobj[id] = 1;
-            }
-
+        } catch (error) {
+            console.error('Error reading state:', error);
+            return;
         }
-        // localStorage.setItem("state",JSON.stringify(arrobj));
-    });
-    localStorage.setItem("state", JSON.stringify(arrobj));
-    shownotes();
+
+        // Toggle the state for the specific note
+        if (!stateArray[id] && stateArray[id] !== 0) {
+            stateArray[id] = 1;
+        } else {
+            stateArray[id] = stateArray[id] === 1 ? 0 : 1;
+        }
+
+        // Save updated state
+        try {
+            localStorage.setItem("state", JSON.stringify(stateArray));
+        } catch (error) {
+            console.error('Error saving state:', error);
+            alert('Failed to update note status. Please try again.');
+            return;
+        }
+
+        // Update UI
+        const noteCards = document.getElementsByClassName('notecard');
+        const element = noteCards[id];
+        if (!element) return;
+
+        const button = element.getElementsByTagName("button")[1];
+        if (!button) return;
+
+        // Apply consistent styling based on state
+        if (stateArray[id] === 1) {
+            button.innerText = "𝙉𝙤𝙩 𝙄𝙢𝙥𝙤𝙧𝙩𝙖𝙣𝙩";
+            button.className = "btn btn-success my-3";
+            element.style.background = "#7bff00";
+        } else {
+            button.innerText = "𝙄𝙢𝙥𝙤𝙧𝙩𝙖𝙣𝙩";
+            button.className = "btn btn-danger my-3";
+            element.style.background = "white";
+        }
+        element.style.color = "black";
+    } catch (error) {
+        console.error('Unexpected error:', error);
+        alert('An error occurred while updating the note. Please try again.');
+    }
     //let cardTxt = element.getElementsByTagName("button")[1].innerText;
     // console.log(cardTxt);});
 
@@ -216,25 +239,33 @@ function markugt(id) {
 }
 
 
-let search = document.getElementById('searchTxt');
-search.addEventListener("input", function () {
+// Handle note search functionality
+const search = document.getElementById('searchTxt');
+const debounce = (func, delay) => {
+    let timeoutId;
+    return (...args) => {
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+        timeoutId = setTimeout(() => {
+            func.apply(null, args);
+        }, delay);
+    };
+};
 
-    let inputVal = search.value.toLowerCase();
-    console.log('Input event fired!', inputVal);
-    let noteCards = document.getElementsByClassName('notecard');
-    Array.from(noteCards).forEach(function (element) {
-        let cardTxt = element.getElementsByTagName("p")[0].innerText;
-        if (cardTxt.includes(inputVal)) {
-            element.style.display = "block";
-            // element.style.background="red";
-            // element.style.background="white";
-        }
-        else {
-            element.style.display = "none";
-        }
-        // console.log(cardTxt);
-    })
-})
+search.addEventListener("input", debounce(function () {
+    try {
+        const inputVal = search.value.toLowerCase().trim();
+        const noteCards = document.getElementsByClassName('notecard');
+        
+        Array.from(noteCards).forEach(function (element) {
+            const cardTxt = element.getElementsByTagName("p")[0]?.innerText.toLowerCase() || '';
+            element.style.display = cardTxt.includes(inputVal) ? "block" : "none";
+        });
+    } catch (error) {
+        console.error('Error during search:', error);
+    }
+}, 300));
 
 /*
 Further Features:
