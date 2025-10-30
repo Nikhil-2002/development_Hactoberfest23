@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Calendar</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #4a90e2;
+      color: white;
+      padding: 1rem 2rem;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .calendar-container {
+      margin-top: 2rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 90%;
+      max-width: 600px;
+    }
+
+    .month-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .month-header h2 {
+      margin: 0;
+    }
+
+    .nav-buttons button {
+      background-color: #4a90e2;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .calendar-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+    }
+
+    .day-name, .day {
+      text-align: center;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+
+    .day-name {
+      font-weight: bold;
+      background-color: #e0e7ff;
+    }
+
+    .day {
+      background-color: #f0f4f8;
+    }
+
+    .day:hover {
+      background-color: #d0e2ff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Calendar</h1>
+  </header>
+
+  <div class="calendar-container">
+    <div class="month-header">
+      <div class="nav-buttons">
+        <button>&lt; Prev</button>
+      </div>
+      <h2>October 2025</h2>
+      <div class="nav-buttons">
+        <button>Next &gt;</button>
+      </div>
+    </div>
+
+    <div class="calendar-grid">
+      <div class="day-name">Sun</div>
+      <div class="day-name">Mon</div>
+      <div class="day-name">Tue</div>
+      <div class="day-name">Wed</div>
+      <div class="day-name">Thu</div>
+      <div class="day-name">Fri</div>
+      <div class="day-name">Sat</div>
+
+      <!-- Example days (you can generate these dynamically with JS later) -->
+      <div class="day">1</div>
+      <div class="day">2</div>
+      <div class="day">3</div>
+      <div class="day">4</div>
+      <div class="day">5</div>
+      <div class="day">6</div>
+      <div class="day">7</div>
+      <!-- Continue filling in days -->
+    </div>
+  </div>
+</body>
+</html>
