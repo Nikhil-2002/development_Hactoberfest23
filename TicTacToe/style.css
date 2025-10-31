@@ -1,0 +1,80 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  background: #1a1a2e;
+  color: #e94560;
+  padding: 20px;
+}
+
+h1 {
+  color: #f17ebf;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+#game-status {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #bae8e8;
+  margin-bottom: 20px;
+  min-height: 24px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  justify-content: center;
+  margin-top: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  background: #28a7c1;
+  border-radius: 15px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #16213e;
+  border-radius: 10px;
+  font-size: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-out, background 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  font-weight: 600;
+}
+
+/* Specific styles for 'X' and 'O' */
+.cell.x-marker {
+  color: #e94560;
+}
+
+.cell.o-marker {
+  color: #bae8e8;
+}
+
+.cell:hover:not(.x-marker):not(.o-marker) {
+  background: #283747;
+  transform: scale(1.05);
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #e94560;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.1s;
+}
+
+button:hover {
+  background: #ff6a85;
+  transform: translateY(-2px);
+}
