@@ -1,0 +1,162 @@
+.header {
+  background-color: white;
+  height: 80px;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-shadow: 0 2px 3px -1px rgb(0 0 0 / 20%);
+  z-index: 1;
+}
+
+.logo {
+  height: 130px;
+  width: 130px;
+}
+
+.sellers-logo {
+  height: 170px;
+  width: 170px;
+}
+
+.icons-section {
+  margin-inline-start: auto;
+  margin-inline-end: 50px;
+  position: relative;
+  display: flex;
+}
+
+.inner-icons-section {
+  display: flex;
+}
+
+.header-button {
+  width: 95px;
+  height: 35px !important;
+  margin-inline: 10px;
+  padding: 5px 12px !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  text-transform: none !important;
+  text-align: center;
+}
+
+.profile {
+  margin-inline: auto 10px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.profile p {
+  margin: 0 5px 0 0;
+  font-size: 15px;
+}
+
+.profile button:hover {
+  cursor: pointer;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  transform: scale(1.1);
+  font-weight: small;
+}
+
+.icon-button:hover {
+  cursor: pointer;
+}
+
+.icon-title {
+  margin: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 13px;
+}
+
+.profile-icon,
+.cart-icon,
+.wishlist-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.indicator {
+  height: 0;
+  width: 40px;
+  border: 2px solid black;
+  position: absolute;
+  top: 58px;
+}
+
+.profile-icon-indicator {
+  /* right: -10px; */
+  left: 13px;
+}
+
+.dropdown-welcome {
+  margin: 0 0 15px;
+}
+
+.button-section {
+  display: flex;
+}
+
+.dropdown hr {
+  margin-block: 15px;
+  opacity: 0.4;
+}
+
+.dropdown p {
+  margin: 5px 0 7px;
+}
+
+.welcome-user {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-user p {
+  margin: 0;
+}
+
+.welcome-user p:hover {
+  cursor: text;
+  font-weight: normal;
+}
+
+.dropdown p:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dropdown #username {
+  font-weight: bold;
+  margin: 0 0 0 5px;
+}
+
+.cart-length {
+  position: absolute;
+  bottom: 37px;
+  right: 17px;
+  width: 18px;
+  background-color: black;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  /* stylelint-disable-next-line font-family-no-missing-generic-family-keyword */
+  font-family: "Source Sans";
+  font-weight: bold;
+}
